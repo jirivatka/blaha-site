@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Blaha</title>
+<meta name="description" content="Help for Blaha: connecting to a Vikunja server, API tokens, offline behaviour, calendar and reminders, and the one-time unlock.">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#251137">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Blaha">
+<meta property="og:title" content="Support — Blaha">
+<meta property="og:description" content="Help for Blaha: connecting to a Vikunja server, API tokens, offline behaviour, calendar and reminders, and the one-time unlock.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <a class="mark" href="./"><img src="icon-96.png" alt="" width="28" height="28">Blaha</a>
+  <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+</div></header>
+
+<main class="wrap">
+<h1>Support</h1>
+<p class="lede">Ask a question or report a problem in the <a href="https://github.com/jirivatka/Blaha-Support/discussions">support forum</a>. It is open to everyone — a GitHub account is all you need, and you do not need a Vikunja server to post.</p>
+<p class="note">⚠️ Never post an API token, a password or a server address you would rather keep private. Not in a screenshot, not in a log, not "with a few characters removed". If a token has been shared anywhere, delete it in Vikunja under <strong>Settings ▸ API Tokens</strong> and make a new one.</p>
+
+<h2>Blaha needs a Vikunja server — or the demo</h2>
+<p>Blaha is a client, not a service. Your tasks live on a <a href="https://vikunja.io">Vikunja</a> server that you run, or on Vikunja Cloud; Blaha talks to that and to nothing else.</p>
+<p>To look around without any of that, tap <strong>Try the demo</strong> on the first screen. The demo is a Vikunja that runs on the device itself — sample projects, tasks and calendar events, with writes that behave exactly as they would against a real server. It needs no account and no network. Leave it under <strong>Preferences ▸ Server</strong>.</p>
+
+<h2>Connecting</h2>
+<dl>
+  <dt>The address</dt>
+  <dd>The address of the Vikunja itself, for example <code>https://tasks.example.com</code> — not the <code>/api/v1</code> path underneath it. <strong>It must be HTTPS.</strong> A plain <code>http://</code> address will not connect: iOS and macOS block unencrypted connections, and Blaha asks for no exception to that.</dd>
+
+  <dt>An API token (recommended)</dt>
+  <dd>Make it in Vikunja under <strong>Settings ▸ API Tokens</strong>, with read and write on <strong>Tasks</strong>, <strong>Labels</strong> and <strong>Projects</strong>. A token does not expire, which makes it the steadier of the two methods — and on <strong>Vikunja Cloud it is the only one that works</strong>, because Cloud does not accept a username and password over the API at all. Blaha keeps the token in the system Keychain.</dd>
+
+  <dt>Username and password</dt>
+  <dd>An alternative for a server you host yourself. If the account has two-factor authentication, Blaha asks for the one-time code as part of signing in.</dd>
+
+  <dt>A certificate the device does not trust</dt>
+  <dd>A self-signed certificate will be refused, as it would be in Safari. Use a certificate from a certificate authority — Let's Encrypt is free — or install and trust your own CA on the device first.</dd>
+</dl>
+
+<h2>Connected, but something is missing</h2>
+<dl>
+  <dt>A project's tasks do not appear</dt>
+  <dd>Check that the token carries <strong>read</strong> on Tasks <em>and</em> on Projects. A token with Projects only lists the projects and nothing inside them.</dd>
+
+  <dt>Nothing can be edited</dt>
+  <dd>The token needs <strong>write</strong> as well as read. Blaha will queue the change and keep retrying, so edits appear to stick and then come back — see the outbox, below.</dd>
+
+  <dt>A shared project is missing</dt>
+  <dd>Blaha shows what the account you signed in as can see. If a project was shared with a different account, sign in as that one — or, with the unlock, add it as a second account.</dd>
+</dl>
+
+<h2>Offline, and the outbox</h2>
+<p>Blaha keeps working without a connection: the last sync is cached, and anything you change is queued and sent when the server is reachable again. Nothing is silently dropped, and a queued change is not lost by closing the app.</p>
+<p>If something stays queued, it is usually the server refusing it — a permission on the token, or a project that no longer exists.</p>
+
+<h2>Calendar and reminders</h2>
+<dl>
+  <dt>Calendar events</dt>
+  <dd>Blaha reads the calendars already on your device, through the system's own permission. It never writes to them, and it sends nothing about them anywhere. In the demo, the events are the demo's own — no calendar permission is asked for and nothing of yours is read.</dd>
+
+  <dt>Reminders arrive late, or not at all</dt>
+  <dd>Reminders are scheduled locally by your device, so they need notification permission, which Blaha asks for where a reminder is set. On a Mac, check <strong>System Settings ▸ Notifications ▸ Blaha</strong>: with the style set to <em>Banners</em> an alert disappears after a few seconds, while <em>Alerts</em> stays until it is dismissed.</dd>
+</dl>
+
+<h2>The unlock</h2>
+<dl>
+  <dt>What is free</dt>
+  <dd>Forecast, Tasks, Calendar, Projects, Done, capture, the share extension and the widgets — including defer dates.</dd>
+
+  <dt>What the unlock adds</dt>
+  <dd><strong>Blocked</strong>, <strong>Review</strong>, <strong>Perspectives</strong> and <strong>multiple accounts</strong>. One payment, no subscription.</dd>
+
+  <dt>The 7-day trial</dt>
+  <dd>Everything is open for seven days from first launch. When it ends, the four paid screens say so rather than pretending they were never there.</dd>
+
+  <dt>You already bought it, on another device</dt>
+  <dd>Use <strong>Restore</strong> on the purchase screen. The unlock belongs to your Apple Account, so it carries across your iPhone, iPad and Mac at no extra cost.</dd>
+</dl>
+
+<h2>Your data</h2>
+<p>Blaha has no backend. Your tasks go to your server and nowhere else, there is no analytics and no crash reporter, and the only account involved is the one you already have. The <a href="privacy.html">privacy policy</a> says this at length, and to delete everything Blaha holds it is enough to delete the app — the tasks themselves live on your server and are yours to remove there.</p>
+
+<h2>What helps a question get answered</h2>
+<ul>
+  <li>your device and OS version, and whether it is the iPhone, iPad or Mac app</li>
+  <li>your Vikunja version, and whether it is self-hosted or Cloud</li>
+  <li>what you expected to see, and what appeared instead</li>
+  <li>whether the same thing happens in the demo — that separates the app from the server in one step</li>
+</ul>
+</main>
+
+<footer><div class="wrap">
+<p>© 2026 RedPixl s.r.o. · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
+<p class="fineprint">Blaha is an independent third-party client for Vikunja. Vikunja is an open-source project and is not affiliated with, and does not endorse, this app.</p>
+</div></footer>
+</body>
+</html>

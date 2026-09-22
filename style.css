@@ -1,0 +1,148 @@
+/* One stylesheet, no external assets — these pages must render if a CDN is
+   blocked, and App Review fetches them from who-knows-where.
+   ⭐ Taken from tradelogbook.app's sheet so the two sites are siblings; only
+   the palette differs, and it is the app icon's own: ink plum, with the
+   icon's red check as the one warm colour. */
+:root {
+  --ink: #1b1524;
+  --muted: #5f5870;
+  --line: #e6e2ec;
+  --bg: #ffffff;
+  --accent: #5b3f86;
+  --surface: #f8f6fb;
+  --done: #c93b35;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece8f2; --muted: #a49bb5; --line: #2c2436;
+    --bg: #171022; --accent: #b79ae0; --surface: #1f1730;
+    --done: #e8635c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+
+header {
+  position: sticky; top: 0; z-index: 20;
+  border-bottom: 1px solid var(--line); background: var(--bg);
+}
+@supports (backdrop-filter: blur(1px)) {
+  header {
+    background: color-mix(in srgb, var(--bg) 80%, transparent);
+    backdrop-filter: saturate(1.8) blur(14px);
+    -webkit-backdrop-filter: saturate(1.8) blur(14px);
+  }
+}
+header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: .7rem 1.25rem; flex-wrap: wrap;
+}
+.mark {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-weight: 650; color: var(--ink); text-decoration: none; letter-spacing: -.01em;
+}
+.mark img { border-radius: 6px; }
+nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
+nav a:hover { color: var(--ink); }
+
+h1 { font-size: 2.4rem; line-height: 1.15; letter-spacing: -.02em; margin: .2rem 0 .8rem; }
+h2 { font-size: 1.35rem; letter-spacing: -.01em; margin: 2.6rem 0 .6rem; }
+h3 { font-size: 1.05rem; margin: 1.6rem 0 .3rem; }
+p { margin: .7rem 0; }
+a { color: var(--accent); }
+.lede { font-size: 1.15rem; color: var(--muted); }
+.hero { padding: 1rem 0 .5rem; }
+
+.status {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--muted); margin: 0;
+}
+.status .dot {
+  width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent);
+}
+
+.cta { display: flex; gap: .6rem; flex-wrap: wrap; margin: 1.4rem 0 .4rem; }
+.cta a {
+  display: inline-block; padding: .7rem 1.15rem; border-radius: .7rem;
+  text-decoration: none; font-weight: 600;
+}
+.cta .primary { background: var(--accent); color: #fff; }
+.cta .ghost { border: 1px solid var(--line); color: var(--ink); }
+.hero-note { color: var(--muted); font-size: .95rem; }
+
+.grid { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1rem; }
+@media (min-width: 34rem) { .grid { grid-template-columns: 1fr 1fr; } }
+.card {
+  border: 1px solid var(--line); border-radius: .9rem;
+  padding: 1.1rem 1.15rem; background: var(--surface);
+}
+.card h3 { margin-top: 0; }
+.card p { margin: .35rem 0 0; color: var(--muted); font-size: .96rem; }
+
+.note {
+  border-left: 3px solid var(--accent); padding: .1rem 0 .1rem .9rem;
+  color: var(--muted); margin: 1.2rem 0;
+}
+
+dl { margin: 1rem 0; }
+dt { font-weight: 620; margin-top: 1.3rem; }
+dd { margin: .3rem 0 0; color: var(--muted); }
+
+ul { padding-left: 1.1rem; }
+li { margin: .4rem 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; font-size: .85rem; }
+
+footer { border-top: 1px solid var(--line); }
+footer .wrap { padding: 1.6rem 1.25rem 2.4rem; }
+footer p { color: var(--muted); font-size: .9rem; margin: .3rem 0; }
+.fineprint { font-size: .82rem; }
+
+/* Screenshots. Constrained rather than full-bleed: a phone screenshot blown up
+   to the column width reads as a poster, and the point here is the detail.
+   ⚠️ 300px, not the source file's 405px. Displaying a 405px asset at 405px is
+   1x — soft on every Retina screen the site is actually read on. At 300 the
+   same file lands at ~1.35x and is SHARPER while taking less of the page, so
+   the reduction costs no detail and no extra bytes. Do not raise this back
+   toward 405 without shipping a 2x asset to go with it. */
+.shot { margin: 1.6rem 0 2rem; text-align: center; }
+.shot img {
+  max-width: 100%; height: auto; width: 300px;
+  border: 1px solid var(--line); border-radius: 1.4rem;
+}
+/* iPad shots are landscape-ish next to the portrait phone ones — 300px would
+   render the sidebar unreadable. max-width keeps it inside a phone viewport. */
+.shot.wide img { width: 560px; }
+
+.shot figcaption {
+  color: var(--muted); font-size: .9rem; margin-top: .7rem;
+  max-width: 34rem; margin-left: auto; margin-right: auto;
+}
+
+/* The app icon, at a size that reads as the product rather than as a favicon.
+   Rounded to match iOS's own squircle closely enough at this scale. */
+.appicon {
+  width: 96px; height: 96px; border-radius: 22px;
+  display: block; margin: 0 auto 1.1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.18);
+}
+
+/* ⚠️ The WHOLE hero centres, not just the icon. A centred icon above a
+   left-aligned headline reads as a mistake rather than as a choice — the eye
+   sees one thing out of line, not a deliberate arrangement. Body content below
+   stays left-aligned, which is the conventional pairing and keeps long
+   paragraphs readable. */
+.hero { text-align: center; }
+.hero .cta { justify-content: center; }
+.hero .lede, .hero .hero-note {
+  max-width: 34rem; margin-left: auto; margin-right: auto;
+}

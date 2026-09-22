@@ -1,0 +1,25 @@
+# blahatasks.app
+
+The site for **Blaha**, a task manager for [Vikunja](https://vikunja.io) on
+iPhone, iPad and Mac. Three static pages, one stylesheet, no build step and
+**no external assets** — these must render if a CDN is blocked, and App Review
+fetches them from who-knows-where.
+
+| page | what it is for |
+|---|---|
+| `index.html` | the landing page |
+| `support.html` | the App Store **Support URL** |
+| `privacy.html` | the App Store **Privacy Policy URL** |
+
+The support forum is [jirivatka/Blaha-Support](https://github.com/jirivatka/Blaha-Support/discussions).
+⛔ If that repo is ever renamed or made private, both the support page and the
+App Store link break.
+
+`style.css` is tradelogbook.app's sheet with Blaha's palette — ink plum, with
+the app icon's red check as the one warm colour. The icons are generated from
+the app's own `AppIcon.appiconset/ios_1024.png`, so they cannot drift from the
+shipped icon.
+
+⚠️ **Nothing here claims the app is on sale.** It is not, yet. The landing page
+says "coming to the App Store" and there is no store link — when the app ships,
+that line and the link change together.
