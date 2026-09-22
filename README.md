@@ -15,6 +15,11 @@ The support forum is [jirivatka/Blaha-Support](https://github.com/jirivatka/Blah
 ⛔ If that repo is ever renamed or made private, both the support page and the
 App Store link break.
 
+`screens/` holds the three shots on the landing page, downscaled from the App
+Store sets in the app repo (`AppStore/screenshots/`). ⛔ **Never put a Review
+screen on this site**: that screen's own empty-state text names a competing
+app, and a screenshot puts it on the web exactly as a sentence would.
+
 `style.css` is tradelogbook.app's sheet with Blaha's palette — ink plum, with
 the app icon's red check as the one warm colour. The icons are generated from
 the app's own `AppIcon.appiconset/ios_1024.png`, so they cannot drift from the
