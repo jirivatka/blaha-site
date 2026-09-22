@@ -20,6 +20,12 @@ the app icon's red check as the one warm colour. The icons are generated from
 the app's own `AppIcon.appiconset/ios_1024.png`, so they cannot drift from the
 shipped icon.
 
+⛔ **Never name a competing app on these pages** — not in the copy, not in a
+meta tag, not in a commit message, which is as public as the page itself. The
+copy says what Blaha DOES: defer dates, review cycles, saved perspectives.
+That is the stronger claim anyway, because it means something to a reader who
+has never used the other app.
+
 ⚠️ **Nothing here claims the app is on sale.** It is not, yet. The landing page
 says "coming to the App Store" and there is no store link — when the app ships,
 that line and the link change together.
