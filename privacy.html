@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy — Blaha</title>
-<meta name="description" content="Blaha has no backend: your tasks go to your own Vikunja server, and no analytics, crash reporting or third-party SDKs are in the app.">
+<meta name="description" content="Blaha has no backend: your tasks go to your own Vikunja server, and no analytics, crash reporting, advertising or tracking SDKs are in the app.">
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#251137">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Blaha">
 <meta property="og:title" content="Privacy — Blaha">
-<meta property="og:description" content="Blaha has no backend: your tasks go to your own Vikunja server, and no analytics, crash reporting or third-party SDKs are in the app.">
+<meta property="og:description" content="Blaha has no backend: your tasks go to your own Vikunja server, and no analytics, crash reporting, advertising or tracking SDKs are in the app.">
 <link rel="canonical" href="https://blahatasks.app/privacy.html">
 <meta property="og:url" content="https://blahatasks.app/privacy.html">
 <link rel="stylesheet" href="style.css">
@@ -25,11 +25,11 @@
 <main class="wrap">
 <h1>Privacy policy</h1>
 <p class="lede">Blaha has no backend. Your tasks go to the Vikunja server you chose and nowhere else, and nothing about you reaches us — because there is no "us" in the path.</p>
-<p class="note">Last updated 22 September 2026. If any of this stops being true, this page changes in the same release that changes it, not afterwards.</p>
+<p class="note">Last updated 25 September 2026. If any of this stops being true, this page changes in the same release that changes it, not afterwards.</p>
 
 <h2>What we collect</h2>
-<p><strong>Nothing.</strong> Blaha has no servers of its own, no accounts of its own, no analytics, no crash reporting and no third-party SDKs. We cannot see your tasks, your server's address, your name or your email, because none of it is ever sent to us.</p>
-<p>The app's privacy manifest says the same thing in Apple's own terms: no tracking, no tracking domains, and an empty list of collected data types.</p>
+<p><strong>Nothing.</strong> Blaha has no servers of its own, no accounts of its own, no analytics, no crash reporting and no advertising or tracking SDKs. We cannot see your tasks, your server's address, your name or your email, because none of it is ever sent to us.</p>
+<p>The app's privacy manifest says the same thing in Apple's own terms: no tracking, no tracking domains, and an empty list of collected data types. On Android, the Data safety section on Google Play says it in Google's: no data collected, none shared.</p>
 
 <h2>Where your data goes</h2>
 <dl>
@@ -37,10 +37,10 @@
   <dd>Tasks, projects, labels, comments and attachments are read from and written to the server address you enter — yours, or Vikunja Cloud's. That server is operated by you or by the provider you chose, under their terms, not ours.</dd>
 
   <dt>Your device</dt>
-  <dd>A copy of what was last fetched is cached on the device so the app works offline, and changes made offline are queued there until they can be sent. Your API token or password is kept in the system <strong>Keychain</strong>. Widgets read the cached copy only; they never touch the token.</dd>
+  <dd>A copy of what was last fetched is cached on the device so the app works offline, and changes made offline are queued there until they can be sent. Your API token or password is kept in the system <strong>Keychain</strong> on iPhone, iPad and Mac, and on Android encrypted with a key held in the <strong>Android Keystore</strong>. Widgets read the cached copy only; they never touch the token.</dd>
 
-  <dt>Apple</dt>
-  <dd>If you buy the unlock, Apple processes the payment. We never see your payment details, name or email address — Blaha only asks the App Store whether this Apple Account owns the unlock.</dd>
+  <dt>Apple and Google</dt>
+  <dd>If you buy the unlock, Apple or Google Play processes the payment. We never see your payment details, name or email address — Blaha only asks the App Store or Google Play whether your account owns the unlock. On Android that question goes through Google's Play Billing library, the one outside library in the app that talks to a network, and only to Google Play.</dd>
 </dl>
 
 <h2>Your calendar</h2>
@@ -54,11 +54,11 @@
 <p>Blaha is a task manager for a server you run yourself. It is not directed at children.</p>
 
 <h2>Your rights</h2>
-<p>There is no account to close and no data of yours for us to hand over or erase, because we hold none. Deleting the app removes the cache, the queue and the Keychain entry from that device. The tasks themselves live on your Vikunja server and are yours to export or delete there.</p>
+<p>There is no account to close and no data of yours for us to hand over or erase, because we hold none. Deleting the app removes the cache, the queue and the stored token from that device. The tasks themselves live on your Vikunja server and are yours to export or delete there.</p>
 <p>If you want that confirmed in writing, or have any other request under the GDPR, write to <a href="mailto:info@redpixl.pictures">info@redpixl.pictures</a>.</p>
 
 <h2>This website</h2>
-<p>These pages are static files served by GitHub Pages. They use <strong>Cloudflare Web Analytics</strong> to count page views: it sets <strong>no cookies</strong>, stores no identifier on your device, and cannot follow you to other sites. We see totals — which pages were viewed, roughly where from, which referrer — never individuals, and you can block it with any content blocker and the site works identically. We chose it over the usual alternatives precisely because it needs no cookie banner: there is nothing to consent to when nothing is stored on your device. <strong>The app itself still collects nothing</strong> — no analytics, no crash reporting, no third-party SDKs — and the app and the website are separate. Like any web host, GitHub processes the IP address of an incoming request in order to answer it; that is <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's own privacy statement</a>, not ours. The support forum is on GitHub too, and anything posted there is public.</p>
+<p>These pages are static files served by GitHub Pages. They use <strong>Cloudflare Web Analytics</strong> to count page views: it sets <strong>no cookies</strong>, stores no identifier on your device, and cannot follow you to other sites. We see totals — which pages were viewed, roughly where from, which referrer — never individuals, and you can block it with any content blocker and the site works identically. We chose it over the usual alternatives precisely because it needs no cookie banner: there is nothing to consent to when nothing is stored on your device. <strong>The app itself still collects nothing</strong> — no analytics, no crash reporting, no advertising or tracking SDKs — and the app and the website are separate. Like any web host, GitHub processes the IP address of an incoming request in order to answer it; that is <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's own privacy statement</a>, not ours. The support forum is on GitHub too, and anything posted there is public.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy, and any request about your data, go to <a href="mailto:info@redpixl.pictures">info@redpixl.pictures</a> — RedPixl s.r.o., Prague.</p>
