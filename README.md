@@ -11,7 +11,7 @@ fetches them from who-knows-where.
 | `support.html` | the App Store **Support URL** |
 | `privacy.html` | the App Store **Privacy Policy URL** |
 
-The support forum is [jirivatka/Blaha-Support](https://github.com/jirivatka/Blaha-Support/discussions).
+The support forum is published as **https://blahatasks.app/forum/** — the one forum address to use anywhere (site, app, store listings). `forum/index.html` forwards it to [jirivatka/Blaha-Support](https://github.com/jirivatka/Blaha-Support/discussions), so the forum can move without breaking a link.
 ⛔ If that repo is ever renamed or made private, both the support page and the
 App Store link break.
 
