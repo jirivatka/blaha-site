@@ -34,3 +34,15 @@ has never used the other app.
 ⚠️ **Nothing here claims the app is on sale.** It is not, yet. The landing page
 says "coming to the App Store" and there is no store link — when the app ships,
 that line and the link change together.
+
+## The launch film
+
+`video/blaha.mp4` (40 s, 1080p, crf 26 re-encode, 2.2 MB) and
+`video/blaha-poster.jpg` sit under the hero in `figure.film`. The master and
+the HyperFrames project are in the Android repo's untracked `brag-output/`.
+- ⛔ **Self-hosted, never a YouTube or Vimeo embed** — see the note at the top:
+  no external assets, and an iframe would set cookies the privacy page does not
+  mention.
+- ⚠️ `preload="none"` stays — otherwise every visitor downloads the film.
+- ⚠️ The film shows the **Android** app (demo data). Nothing in it claims a
+  store or availability, so it does not go stale when either store ships.
