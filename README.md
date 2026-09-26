@@ -34,3 +34,18 @@ has never used the other app.
 ⚠️ **Nothing here claims the app is on sale.** It is not, yet. The landing page
 says "coming to the App Store" and there is no store link — when the app ships,
 that line and the link change together.
+
+## The launch film
+
+`video/blaha.mp4` (45 s, 1080p, crf 26 re-encode, 2.7 MB) and
+`video/blaha-poster.jpg` sit under the hero in `figure.film`. This is the
+**Apple cut**: Mac, iPad and iPhone screens from the App Store sets. The master
+and the HyperFrames project are in the app repo's untracked `brag-output-mac/`.
+(The Android cut is a separate film, kept off this site on purpose — the site
+is about the Apple apps.)
+- ⛔ **Self-hosted, never a YouTube or Vimeo embed** — see the note at the top:
+  no external assets, and an iframe would set cookies the privacy page does not
+  mention.
+- ⚠️ `preload="none"` stays — otherwise every visitor downloads the film.
+- ⛔ It shows no Review screen (see `screens/` above) and makes no store or
+  availability claim, so it does not go stale when the app ships.
