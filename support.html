@@ -34,7 +34,7 @@
 <h2>Connecting</h2>
 <dl>
   <dt>The address</dt>
-  <dd>The address of the Vikunja itself, for example <code>https://tasks.example.com</code> — not the <code>/api/v1</code> path underneath it. <strong>It must be HTTPS.</strong> A plain <code>http://</code> address will not connect: iOS and macOS block unencrypted connections, and Blaha asks for no exception to that.</dd>
+  <dd>The address of the Vikunja itself, for example <code>https://tasks.example.com</code> — not the <code>/api/v1</code> path underneath it. <strong>It must be HTTPS.</strong> A plain <code>http://</code> address will not connect: iOS, macOS and Android block unencrypted connections, and Blaha asks for no exception to that.</dd>
 
   <dt>An API token (recommended)</dt>
   <dd>Make it in Vikunja under <strong>Settings ▸ API Tokens</strong>, with read and write on <strong>Tasks</strong>, <strong>Labels</strong> and <strong>Projects</strong>. A token does not expire, which makes it the steadier of the two methods — and on <strong>Vikunja Cloud it is the only one that works</strong>, because Cloud does not accept a username and password over the API at all. Blaha keeps the token in the system Keychain.</dd>
@@ -68,22 +68,22 @@
   <dd>Blaha reads the calendars already on your device, through the system's own permission. It never writes to them, and it sends nothing about them anywhere. In the demo, the events are the demo's own — no calendar permission is asked for and nothing of yours is read.</dd>
 
   <dt>Reminders arrive late, or not at all</dt>
-  <dd>Reminders are scheduled locally by your device, so they need notification permission, which Blaha asks for where a reminder is set. On a Mac, check <strong>System Settings ▸ Notifications ▸ Blaha</strong>: with the style set to <em>Banners</em> an alert disappears after a few seconds, while <em>Alerts</em> stays until it is dismissed.</dd>
+  <dd>Reminders are scheduled locally by your device, so they need notification permission, which Blaha asks for where a reminder is set. On a Mac, check <strong>System Settings ▸ Notifications ▸ Blaha</strong>: with the style set to <em>Banners</em> an alert disappears after a few seconds, while <em>Alerts</em> stays until it is dismissed. On Android, allow notifications for Blaha, and for a reminder at the exact minute also allow <strong>Alarms &amp; reminders</strong>; without it Android may deliver the reminder a few minutes late.</dd>
 </dl>
 
 <h2>The unlock</h2>
 <dl>
   <dt>What is free</dt>
-  <dd>Forecast, Tasks, Calendar, Projects, Done, capture, the share extension and the widgets — including defer dates.</dd>
+  <dd>Forecast, Tasks, Calendar, Done, capture, sharing into Blaha from other apps, and the widgets. Every task still shows which project it belongs to, and a defer date set anywhere else is still honoured.</dd>
 
   <dt>What the unlock adds</dt>
-  <dd><strong>Blocked</strong>, <strong>Review</strong>, <strong>Perspectives</strong> and <strong>multiple accounts</strong>. One payment, no subscription.</dd>
+  <dd><strong>Projects</strong>, <strong>Blocked</strong>, <strong>Review</strong>, <strong>Perspectives</strong>, <strong>defer dates</strong> and <strong>multiple accounts</strong>. One payment, no subscription.</dd>
 
   <dt>The 7-day trial</dt>
-  <dd>Everything is open for seven days from first launch. When it ends, the four paid screens say so rather than pretending they were never there.</dd>
+  <dd>Everything is open for seven days from first launch. When it ends, the paid screens say so rather than pretending they were never there.</dd>
 
   <dt>You already bought it, on another device</dt>
-  <dd>Use <strong>Restore</strong> on the purchase screen. The unlock belongs to your Apple Account, so it carries across your iPhone, iPad and Mac at no extra cost.</dd>
+  <dd>On iPhone, iPad and Mac, use <strong>Restore</strong> on the purchase screen: the unlock belongs to your Apple Account, so it carries across all three at no extra cost. On Android it belongs to your Google account, and Blaha finds it by itself on any Android device signed in to that account. The two stores are separate — a purchase on one does not carry over to the other.</dd>
 </dl>
 
 <h2>Your data</h2>
@@ -92,7 +92,7 @@
 
 <h2>What helps a question get answered</h2>
 <ul>
-  <li>your device and OS version, and whether it is the iPhone, iPad or Mac app</li>
+  <li>your device and OS version, and whether it is the iPhone, iPad, Mac or Android app</li>
   <li>your Vikunja version, and whether it is self-hosted or Cloud</li>
   <li>what you expected to see, and what appeared instead</li>
   <li>whether the same thing happens in the demo — that separates the app from the server in one step</li>

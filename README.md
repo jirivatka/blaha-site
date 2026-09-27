@@ -31,9 +31,12 @@ copy says what Blaha DOES: defer dates, review cycles, saved perspectives.
 That is the stronger claim anyway, because it means something to a reader who
 has never used the other app.
 
-⚠️ **Nothing here claims the app is on sale.** It is not, yet. The landing page
-says "coming to the App Store" and there is no store link — when the app ships,
-that line and the link change together.
+⚠️ **Store status, as the page states it:** Android is **on Google Play since
+2026-09-27** — the hero carries a "Get it on Google Play" link and the status
+line says so. The Apple apps are still "coming to the App Store", with no store
+link: when they ship, that half of the status line and an App Store link change
+together. ⛔ Text links only — no store badge images (they would be third-party
+brand assets with their own usage rules, and nothing here loads from outside).
 
 ## The launch film
 
