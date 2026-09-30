@@ -31,12 +31,15 @@ copy says what Blaha DOES: defer dates, review cycles, saved perspectives.
 That is the stronger claim anyway, because it means something to a reader who
 has never used the other app.
 
-⚠️ **Store status, as the page states it:** Android is **on Google Play since
-2026-09-27** — the hero carries a "Get it on Google Play" link and the status
-line says so. The Apple apps are still "coming to the App Store", with no store
-link: when they ship, that half of the status line and an App Store link change
-together. ⛔ Text links only — no store badge images (they would be third-party
-brand assets with their own usage rules, and nothing here loads from outside).
+⚠️ **Store status, as the page states it:** the **Mac** app is on the App Store
+since 2026-09-30 (app id 6815227673) and **Android** on Google Play since
+2026-09-27 — the hero carries a text link to each and the status line says so.
+The **iPhone/iPad** version was not live yet on 09-30 (the public App Store page
+said "Only for Mac"), so the status line says "coming to iPhone and iPad". When
+it ships, change that half and relabel the App Store link ("Download on the App
+Store") in the same commit. ⛔ Text links only — no store badge images (they
+would be third-party brand assets with their own usage rules, and nothing here
+loads from outside).
 
 ## The launch film
 
