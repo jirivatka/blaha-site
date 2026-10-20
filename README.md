@@ -55,3 +55,17 @@ master and the HyperFrames project are in the app repo's untracked
 - ⚠️ `preload="none"` stays — otherwise every visitor downloads the film.
 - ⛔ It shows no Review screen (see `screens/` above) and makes no store or
   availability claim, so it does not go stale when the app ships.
+
+## Structured data and title
+
+`index.html` carries one JSON-LD block (Organization = RedPixl s.r.o.,
+WebSite, SoftwareApplication). Added 2026-10-20 for SEO checkers; the title
+was lengthened to 59 characters at the same time (aim 50–60).
+- ⛔ **When the iPhone/iPad app ships**, in the same sweep as the status line:
+  add `iOS 17 or later, iPadOS 17 or later` to `operatingSystem` and the iOS
+  App Store URL to `sameAs` (today they list only the live Mac and Android apps).
+- ⛔ Never add `aggregateRating` or `review` values that are not the stores'
+  real ones — Google requires one for a software rich result, so without it the
+  block describes the app but earns no star snippet. That is fine.
+- Prices: `offers` says free (0) with the one-time unlock in words; the unlock's
+  price is not on this site, so it is not in the markup either.
