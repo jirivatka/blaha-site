@@ -149,7 +149,7 @@ footer p { color: var(--muted); font-size: .9rem; margin: .3rem 0; }
 
 /* Launch film. ⛔ Self-hosted, never a YouTube embed: these pages load no
    external asset, and an iframe would set cookies privacy.html does not mention.
-   ⚠️ preload="none" on the <video> so nobody downloads 3 MB before choosing to
+   ⚠️ preload="none" on the <video> so nobody downloads 4 MB before choosing to
    watch; the poster is a real frame, so the idle state still shows the product. */
 .film { margin: 1.6rem 0 2.4rem; text-align: center; }
 .film video {
