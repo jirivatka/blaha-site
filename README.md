@@ -31,13 +31,11 @@ copy says what Blaha DOES: defer dates, review cycles, saved perspectives.
 That is the stronger claim anyway, because it means something to a reader who
 has never used the other app.
 
-⚠️ **Store status, as the page states it:** the **Mac** app is on the App Store
-since 2026-09-30 (app id 6815227673) and **Android** on Google Play since
-2026-09-27 — the hero carries a text link to each and the status line says so.
-The **iPhone/iPad** version was not live yet on 09-30 (the public App Store page
-said "Only for Mac"), so the status line says "coming to iPhone and iPad". When
-it ships, change that half and relabel the App Store link ("Download on the App
-Store") in the same commit. ⛔ Text links only — no store badge images (they
+✅ **Store status, as the page states it:** every platform is live — **Android**
+on Google Play since 2026-09-27, the **Mac** on the App Store since 2026-09-30,
+and **iPhone/iPad** on the App Store since 2026-10-24 (same app id 6815227673,
+one Universal Purchase). The status line says "On the App Store and Google
+Play" and the hero carries one text link to each store. ⛔ Text links only — no store badge images (they
 would be third-party brand assets with their own usage rules, and nothing here
 loads from outside).
 
@@ -61,9 +59,9 @@ master and the HyperFrames project are in the app repo's untracked
 `index.html` carries one JSON-LD block (Organization = RedPixl s.r.o.,
 WebSite, SoftwareApplication). Added 2026-10-20 for SEO checkers; the title
 was lengthened to 59 characters at the same time (aim 50–60).
-- ⛔ **When the iPhone/iPad app ships**, in the same sweep as the status line:
-  add `iOS 17 or later, iPadOS 17 or later` to `operatingSystem` and the iOS
-  App Store URL to `sameAs` (today they list only the live Mac and Android apps).
+- `operatingSystem` lists iOS, iPadOS, macOS and Android since 2026-10-24, when
+  the iPhone/iPad app went live. `sameAs` needs no iOS entry: the one App Store
+  URL serves iPhone, iPad and Mac.
 - ⛔ Never add `aggregateRating` or `review` values that are not the stores'
   real ones — Google requires one for a software rich result, so without it the
   block describes the app but earns no star snippet. That is fine.
