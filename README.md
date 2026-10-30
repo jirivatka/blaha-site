@@ -10,6 +10,7 @@ fetches them from who-knows-where.
 | `index.html` | the landing page |
 | `support.html` | the App Store **Support URL** |
 | `privacy.html` | the App Store **Privacy Policy URL** |
+| `eula.html` | the end-user licence agreement (explicit no reverse engineering); for Google Play and, once a phone number is added, the App Store Connect custom EULA |
 
 The support forum is published as **https://blahatasks.app/forum/** — the one forum address to use anywhere (site, app, store listings). `forum/index.html` forwards it to [jirivatka/Blaha-Support](https://github.com/jirivatka/Blaha-Support/discussions), so the forum can move without breaking a link.
 ⛔ If that repo is ever renamed or made private, both the support page and the
