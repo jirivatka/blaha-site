@@ -37,7 +37,7 @@
   <dd>The address of the Vikunja itself, for example <code>https://tasks.example.com</code> — not the <code>/api/v1</code> path underneath it. <strong>It must be HTTPS.</strong> A plain <code>http://</code> address will not connect: iOS, macOS and Android block unencrypted connections, and Blaha asks for no exception to that.</dd>
 
   <dt>An API token (recommended)</dt>
-  <dd>Make it in Vikunja under <strong>Settings ▸ API Tokens</strong>, with read and write on <strong>Tasks</strong>, <strong>Labels</strong> and <strong>Projects</strong>. A token does not expire, which makes it the steadier of the two methods — and on <strong>Vikunja Cloud it is the only one that works</strong>, because Cloud does not accept a username and password over the API at all. Blaha keeps the token in the system Keychain.</dd>
+  <dd>Make it in Vikunja under <strong>Settings ▸ API Tokens</strong>, with the <strong>Full access</strong> preset and a custom date well ahead: a token lasts 30 days unless you choose otherwise, and Vikunja has no "never". On <strong>Vikunja Cloud a token is the only sign-in that works</strong>, because Cloud does not accept a username and password over the API at all. Blaha keeps the token in the system Keychain.</dd>
 
   <dt>Username and password</dt>
   <dd>An alternative for a server you host yourself. If the account has two-factor authentication, Blaha asks for the one-time code as part of signing in.</dd>
@@ -48,11 +48,14 @@
 
 <h2>Connected, but something is missing</h2>
 <dl>
+  <dt>A token that worked has stopped</dt>
+  <dd>Tokens have an end date. Check it in Vikunja under <strong>Settings ▸ API Tokens</strong>, and make a new one if it has passed.</dd>
+
   <dt>A project's tasks do not appear</dt>
-  <dd>Check that the token carries <strong>read</strong> on Tasks <em>and</em> on Projects. A token with Projects only lists the projects and nothing inside them.</dd>
+  <dd>Check the token's permissions. Vikunja lists <strong>Projects views</strong> and <strong>Projects views tasks</strong> separately from Projects, and without them a token lists the projects and nothing inside them. <strong>Full access</strong> includes them.</dd>
 
   <dt>Nothing can be edited</dt>
-  <dd>The token needs <strong>write</strong> as well as read. Blaha will queue the change and keep retrying, so edits appear to stick and then come back — see the outbox, below.</dd>
+  <dd>The token needs <strong>write</strong> as well as read. Tags on a task, comments, links between tasks, attachments and saved perspectives each have a permission of their own, and <strong>Full access</strong> includes them all. Blaha will queue the change and keep retrying, so edits appear to stick and then come back — see the outbox, below.</dd>
 
   <dt>A shared project is missing</dt>
   <dd>Blaha shows what the account you signed in as can see. If a project was shared with a different account, sign in as that one — or, with the unlock, add it as a second account.</dd>
