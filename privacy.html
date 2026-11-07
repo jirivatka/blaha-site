@@ -34,7 +34,7 @@
 <h2>Where your data goes</h2>
 <dl>
   <dt>Your Vikunja server</dt>
-  <dd>Tasks, projects, labels, comments and attachments are read from and written to the server address you enter — yours, or Vikunja Cloud's. That server is operated by you or by the provider you chose, under their terms, not ours.</dd>
+  <dd>Tasks, projects, labels, comments, attachments and time entries are read from and written to the server address you enter — yours, or Vikunja Cloud's. That server is operated by you or by the provider you chose, under their terms, not ours.</dd>
 
   <dt>Your device</dt>
   <dd>A copy of what was last fetched is cached on the device so the app works offline, and changes made offline are queued there until they can be sent. Your API token or password is kept in the system <strong>Keychain</strong> on iPhone, iPad and Mac, and on Android encrypted with a key held in the <strong>Android Keystore</strong>. Widgets read the cached copy only; they never touch the token.</dd>
@@ -47,6 +47,9 @@
 <p>Blaha shows calendar events beside your tasks. Those events are read from the calendars already on your device, through the system permission that you grant and can revoke at any time. They are <strong>never sent anywhere</strong> — not to your Vikunja server, not to us — and Blaha does not create or change events.</p>
 <p>In the demo, the events are the demo's own sample data. No calendar permission is requested in demo mode and nothing of yours is read.</p>
 
+<h2>Time tracking</h2>
+<p>Time entries and hourly rates are kept on <strong>your Vikunja server</strong>, in a project called <strong>Timesheet</strong> that Blaha makes there: each entry is a task in it, and the rates are written in that project's description. They go nowhere else, which is also why every device and app that reads that server sees the same hours.</p>
+<p>A running timer on the Lock Screen and in the Dynamic Island, in the Mac menu bar, or in an Android notification is drawn by your own device. No push service is involved. A CSV or PDF export is made on the device and goes only where you send it.</p>
 <h2>Notifications</h2>
 <p>Reminders and calendar alerts are scheduled by your own device. There is no push service, and no device token exists for anyone to hold — which is also why a reminder only fires while the app has been opened to schedule it.</p>
 
