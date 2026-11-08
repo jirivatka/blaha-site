@@ -16,8 +16,19 @@ The support forum is published as **https://blahatasks.app/forum/** — the one 
 ⛔ If that repo is ever renamed or made private, both the support page and the
 App Store link break.
 
-`screens/` holds the three shots on the landing page, downscaled from the App
-Store sets in the app repo (`AppStore/screenshots/`). ⛔ **Never put a Review
+`screens/` holds the landing page's shots, downscaled from the App Store sets
+in the app repo (`AppStore/screenshots/`): Mac 1200×750, iPad 1120×840, iPhone
+600×1303.
+
+**Home layout (redesigned 2026-11-08, "too plain, doesn't sell the app"):** a
+two-column hero (headline, store links, the Mac with the iPhone over it), a
+four-item proof strip, one row per job with a large screenshot alternating
+sides (Forecast and Calendar, Tasks and defer dates, Projects and Review,
+Perspectives, Timesheet; paid ones carry an "Unlock" tag), the film in its own
+band, Free vs unlock cards, and a closing download box. Body text stays at the
+46rem reading width; the hero and rows are 72rem. ⚠️ The stylesheet is linked
+as `style.css?v=2` on every page: bump the number whenever the CSS changes, or
+returning visitors keep the old sheet. ⛔ **Never put a Review
 screen on this site**: that screen's own empty-state text names a competing
 app, and a screenshot puts it on the web exactly as a sentence would.
 
