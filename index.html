@@ -14,7 +14,7 @@
 <meta property="og:description" content="Defer dates, review cycles and perspectives of your own, for Vikunja — the open-source to-do server you run yourself. iPhone, iPad, Mac and Android.">
 <link rel="canonical" href="https://blahatasks.app/">
 <meta property="og:url" content="https://blahatasks.app/">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -61,76 +61,111 @@
 }
 </script>
 </head>
-<body>
+<body class="is-home">
 <header><div class="wrap">
   <a class="mark" href="./"><img src="icon-96.png" alt="" width="28" height="28">Blaha</a>
   <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="eula.html">Licence</a></nav>
 </div></header>
 
-<main class="wrap">
-<div class="hero">
-  <img class="appicon" src="icon-512.png" alt="" width="96" height="96">
-  <h1>Blaha</h1>
-  <p class="lede"><strong>Vikunja</strong> holds your tasks. Blaha gives them a system — defer dates, review cycles, perspectives of your own — on iPhone, iPad, Mac and Android.</p>
-  <p class="status"><span class="dot"></span>On the App Store and Google Play</p>
-  <div class="cta">
-    <a class="primary" href="https://apps.apple.com/app/blaha-tasks/id6815227673">Download on the App Store</a>
-    <a class="primary" href="https://play.google.com/store/apps/details?id=com.redpixl.blaha">Get it on Google Play</a>
-    <a class="ghost" href="support.html">Support</a>
-    <a class="ghost" href="forum/">Forum</a>
+<main class="home">
+<section class="hero2">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow"><img src="icon-96.png" alt="" width="22" height="22">Blaha for Vikunja</p>
+      <h1>A planner for Vikunja, not just a list.</h1>
+      <p class="lede"><strong>Vikunja</strong> holds your tasks. Blaha gives them a system — defer dates, review cycles, perspectives of your own — on iPhone, iPad, Mac and Android.</p>
+      <div class="cta">
+        <a class="primary" href="https://apps.apple.com/app/blaha-tasks/id6815227673">Download on the App Store</a>
+        <a class="primary" href="https://play.google.com/store/apps/details?id=com.redpixl.blaha">Get it on Google Play</a>
+      </div>
+      <p class="hero-note">Free to use. Your tasks stay on your own server.</p>
+    </div>
+    <div class="devices">
+      <img class="dev-mac" src="screens/mac-forecast.png" alt="Blaha on the Mac: a sidebar of screens and perspectives, a forecast of the days ahead, and the selected task open in a third column." width="1200" height="750">
+      <img class="dev-phone" src="screens/iphone-forecast.png" alt="Blaha on an iPhone showing Forecast: today's calendar events listed beside the tasks that are due." width="600" height="1303">
+    </div>
   </div>
-  <p class="hero-note">Your tasks stay on your own server. Nothing to sign up for here, and no backend of ours in the middle.</p>
-</div>
+</section>
 
+<section class="proof">
+  <ul>
+    <li><strong>Your server</strong><span>No account here, no backend of ours in the middle.</span></li>
+    <li><strong>No subscription</strong><span>Free to use; one payment for the rest.</span></li>
+    <li><strong>Four platforms</strong><span>iPhone, iPad, Mac and Android.</span></li>
+    <li><strong>A demo inside</strong><span>Try it on sample data, no server needed.</span></li>
+  </ul>
+</section>
 
-<figure class="film">
-  <video controls preload="none" playsinline poster="video/blaha-poster.jpg" width="1280" height="720" aria-label="Blaha in just over a minute: Forecast and Tasks on Android, Calendar and Perspectives on the iPad, the three columns and a project on the Mac, a running timer in the Timesheet, then iPhone, iPad, Mac and Android together, running on sample data. The film is silent.">
-    <source src="video/blaha.mp4?v=1.2" type="video/mp4">
-  </video>
-  <figcaption>Blaha in just over a minute.</figcaption>
-</figure>
+<section class="row">
+  <div class="row-text">
+    <p class="kicker">Forecast and Calendar</p>
+    <h2>See the day as it really is.</h2>
+    <p>Forecast puts the day's calendar events beside the tasks that are due, so an afternoon that is already full looks full. Month, week and day views read the calendars already on your device.</p>
+  </div>
+  <figure class="row-shot"><img class="tablet" src="screens/ipad-calendar.png" alt="Blaha on an iPad: a week of the calendar with events and due tasks side by side." width="1120" height="840" loading="lazy"></figure>
+</section>
 
-<figure class="shot wide">
-  <img src="screens/mac-forecast.png" alt="Blaha on the Mac: a sidebar of screens and perspectives, a forecast of the days ahead, and the selected task open in a third column." width="1200" height="750" loading="lazy">
-  <figcaption>Three columns on the Mac: where you are, what is coming, and the task you are editing — without leaving the list to edit it.</figcaption>
-</figure>
+<section class="row flip">
+  <div class="row-text">
+    <p class="kicker">Tasks and defer dates <span class="tag">Unlock</span></p>
+    <h2>Only what you can do now.</h2>
+    <p>Deferred work is hidden until its date, and the count of what is hidden is always shown. Blocked work waits in its own list, so the one in front of you is the one you can act on.</p>
+  </div>
+  <figure class="row-shot"><img class="phone" src="screens/iphone-tasks.png" alt="Blaha's Tasks on an iPhone: tasks from several projects, with ten ready, two deferred and two blocked." width="600" height="1303" loading="lazy"></figure>
+</section>
 
-<h2>What it does</h2>
-<div class="grid">
-  <div class="card"><h3>Forecast</h3><p>Today and the days ahead, with your calendar events beside the tasks that are due.</p></div>
-  <div class="card"><h3>Tasks</h3><p>Everything you could do now. Deferred work is hidden until its date, and the count of what is hidden is always shown.</p></div>
-  <div class="card"><h3>Calendar</h3><p>Month, week and day, reading the calendars already on your device.</p></div>
-  <div class="card"><h3>Projects</h3><p>Nested projects, grouped in folders, with their available and deferred work separated. Part of the unlock — every task still names its project everywhere else.</p></div>
-  <div class="card"><h3>Review</h3><p>A review cycle per project, so a project cannot quietly go stale.</p></div>
-  <div class="card"><h3>Perspectives</h3><p>Saved filters of your own — next actions, this week, waiting on — kept in the sidebar.</p></div>
-  <div class="card"><h3>Timesheet</h3><p>Start a timer, or add time by hand, against any project. Hourly rates, hours by project and task, and a CSV or PDF to send with an invoice. Part of the unlock.</p></div>
-</div>
+<section class="row">
+  <div class="row-text">
+    <p class="kicker">Projects and Review <span class="tag">Unlock</span></p>
+    <h2>Projects that cannot quietly go stale.</h2>
+    <p>Nested projects, grouped in folders, with their available and deferred work separated. Each project gets a review cycle, and Blaha tells you when one is due.</p>
+  </div>
+  <figure class="row-shot"><img class="mac" src="screens/mac-project.png" alt="A project on the Mac: its review cycle, available tasks, a deferred task, and the selected task open beside them." width="1200" height="750" loading="lazy"></figure>
+</section>
 
+<section class="row flip">
+  <div class="row-text">
+    <p class="kicker">Perspectives <span class="tag">Unlock</span></p>
+    <h2>Views of your own, one tap away.</h2>
+    <p>Save a filter — next actions, this week, waiting on — and it takes a place in the sidebar, behaving like any other screen. On the iPad and the Mac, in the same three columns.</p>
+  </div>
+  <figure class="row-shot"><img class="tablet" src="screens/ipad-perspective.png" alt="Blaha on an iPad in landscape, showing a saved perspective called Next actions listing tasks from several projects." width="1120" height="840" loading="lazy"></figure>
+</section>
 
-<figure class="shot wide">
-  <img src="screens/ipad-perspective.png" alt="Blaha on an iPad in landscape, showing a saved perspective called Next actions listing tasks from several projects." width="1120" height="840" loading="lazy">
-  <figcaption>A perspective is a filter you saved. It takes a place in the sidebar and behaves like any other screen — on the iPad, in the same three-column shape as the Mac.</figcaption>
-</figure>
+<section class="row">
+  <div class="row-text">
+    <p class="kicker">Timesheet <span class="tag">Unlock</span></p>
+    <h2>Know where the hours went.</h2>
+    <p>Start a timer, or add time by hand, against any project. Set hourly rates, read hours by project and task, and export a CSV or a PDF to send with an invoice. A running timer stays in view on the Lock Screen and in the Dynamic Island on iPhone, in the menu bar on the Mac, and in a notification on Android.</p>
+  </div>
+  <figure class="row-shot pair">
+    <img class="mac" src="screens/mac-timesheet.png" alt="Blaha's Timesheet on the Mac: a running timer with a Stop button, the week's total, billable and amount, and hours by project." width="1200" height="750" loading="lazy">
+    <img class="phone over" src="screens/iphone-timesheet.png" alt="Blaha's Timesheet on an iPhone: a running timer for a task with a red Stop button, then the week's total, billable time and amount." width="600" height="1303" loading="lazy">
+  </figure>
+</section>
 
-<figure class="shot wide">
-  <img src="screens/mac-timesheet.png" alt="Blaha's Timesheet on the Mac: a running timer with a Stop button, the week's total, billable and amount, and hours by project." width="1200" height="750" loading="lazy">
-  <figcaption>The Timesheet: a running timer, the week's totals, and where the hours and the money went, by project. A running timer also shows on the Lock Screen and in the Dynamic Island on iPhone, in the menu bar on the Mac, and in a notification on Android — each with Stop.</figcaption>
-</figure>
+<section class="film-band">
+  <h2>See it in just over a minute.</h2>
+  <figure class="film">
+    <video controls preload="none" playsinline poster="video/blaha-poster.jpg" width="1280" height="720" aria-label="Blaha in just over a minute: Forecast and Tasks on Android, Calendar and Perspectives on the iPad, the three columns and a project on the Mac, a running timer in the Timesheet, then iPhone, iPad, Mac and Android together, running on sample data. The film is silent.">
+      <source src="video/blaha.mp4?v=1.2" type="video/mp4">
+    </video>
+  </figure>
+</section>
 
-<figure class="shot">
-  <img src="screens/iphone-timesheet.png" alt="Blaha's Timesheet on an iPhone: a running timer for a task with a red Stop button, then the week's total, billable time and amount." width="600" height="1303" loading="lazy">
-  <figcaption>The same Timesheet on the iPhone. The hours live on your own server, so the phone and the Mac show the same week.</figcaption>
-</figure>
-
-<figure class="shot">
-  <img src="screens/iphone-forecast.png" alt="Blaha on an iPhone showing Forecast: today's calendar events listed beside the tasks that are due." width="600" height="1303" loading="lazy">
-  <figcaption>Forecast puts the day's calendar events beside the tasks that are due, so an afternoon that is already full looks full.</figcaption>
-</figure>
-
+<div class="wrap text">
 <h2>What it costs</h2>
-<p>Blaha is free to use as a full task client: Forecast, Tasks, Calendar, Done, Tags, capture, the share extension and the widgets.</p>
-<p>A <strong>one-time unlock</strong> adds the seven that turn a list into a system: <strong>Projects</strong>, <strong>Blocked</strong>, <strong>Review</strong>, <strong>Perspectives</strong>, <strong>defer dates</strong>, <strong>multiple accounts</strong> and <strong>time tracking</strong>. No subscription — a client for someone else's server has nothing honest to charge rent for.</p>
-<p>Everything is open for a <strong>7-day trial</strong> from first launch, so the paid layer can be judged before it is bought.</p>
+<div class="plans">
+  <div class="plan">
+    <h3>Free</h3>
+    <p>A full task client: Forecast, Tasks, Calendar, Done, Tags, capture, the share extension and the widgets.</p>
+  </div>
+  <div class="plan paid">
+    <h3>One-time unlock</h3>
+    <p>Adds the seven that turn a list into a system: <strong>Projects</strong>, <strong>Blocked</strong>, <strong>Review</strong>, <strong>Perspectives</strong>, <strong>defer dates</strong>, <strong>multiple accounts</strong> and <strong>time tracking</strong>.</p>
+  </div>
+</div>
+<p>No subscription — a client for someone else's server has nothing honest to charge rent for. Everything is open for a <strong>7-day trial</strong> from first launch, so the paid layer can be judged before it is bought.</p>
 
 <h2>What you need</h2>
 <ul>
@@ -141,6 +176,15 @@
 
 <h2>Questions</h2>
 <p>The <a href="support.html">support page</a> covers connecting, tokens, offline behaviour and the purchase. Anything else goes in the <a href="forum/">support forum</a>, which is open to everyone.</p>
+
+<div class="end-cta">
+  <p>Blaha is free to try, with nothing to sign up for.</p>
+  <div class="cta">
+    <a class="primary" href="https://apps.apple.com/app/blaha-tasks/id6815227673">Download on the App Store</a>
+    <a class="primary" href="https://play.google.com/store/apps/details?id=com.redpixl.blaha">Get it on Google Play</a>
+  </div>
+</div>
+</div>
 </main>
 
 <footer><div class="wrap">

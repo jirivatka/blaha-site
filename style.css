@@ -157,3 +157,101 @@ footer p { color: var(--muted); font-size: .9rem; margin: .3rem 0; }
   border: 1px solid var(--line); border-radius: 1rem; background: #171022;
 }
 .film figcaption { color: var(--muted); font-size: .9rem; margin-top: .7rem; }
+
+/* ── Home page, 2026-11-08 redesign ("too plain, doesn't sell the app").
+   The product is shown first: a two-column hero with the Mac and the iPhone,
+   then one row per job with a large real screenshot, alternating sides. Body
+   text sections keep the 46rem reading width (.wrap.text). Still no external
+   asset. ⛔ Never a Review screen (README). */
+.home { overflow-x: clip; }
+.home .wrap.text { padding-top: 1rem; }
+
+.hero2 {
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.hero-inner {
+  max-width: 72rem; margin: 0 auto; padding: 3rem 1.25rem 3.5rem;
+  display: grid; gap: 2.5rem; align-items: center; grid-template-columns: 1fr;
+}
+@media (min-width: 60rem) {
+  .hero-inner { grid-template-columns: 0.9fr 1.1fr; padding: 4.5rem 1.25rem 5rem; }
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem; margin: 0 0 1rem;
+  font-size: .85rem; font-weight: 600; color: var(--accent); letter-spacing: .01em;
+}
+.eyebrow img { border-radius: 6px; }
+.hero2 h1 { font-size: clamp(2.2rem, 5vw, 3.3rem); line-height: 1.08; margin: 0 0 1rem; letter-spacing: -.025em; }
+.hero2 .lede { font-size: 1.15rem; margin: 0 0 1.6rem; max-width: 32rem; }
+.hero2 .cta { margin: 0 0 .9rem; }
+.hero2 .hero-note { margin: 0; }
+
+.devices { position: relative; padding: 0 0 2.5rem; }
+.devices img { display: block; height: auto; border: 1px solid var(--line); background: var(--bg); }
+.dev-mac { width: 92%; border-radius: .8rem; box-shadow: 0 18px 50px rgba(37,17,55,.18); }
+.dev-phone {
+  position: absolute; right: 0; bottom: 0; width: 27%;
+  border-radius: 1.3rem; box-shadow: 0 14px 36px rgba(37,17,55,.28);
+}
+
+.proof { border-bottom: 1px solid var(--line); }
+.proof ul {
+  list-style: none; margin: 0 auto; max-width: 72rem; padding: 1.6rem 1.25rem;
+  display: grid; gap: 1.2rem; grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 60rem) { .proof ul { grid-template-columns: repeat(4, 1fr); } }
+.proof li { margin: 0; display: flex; flex-direction: column; gap: .15rem; }
+.proof strong { font-size: 1rem; }
+.proof span { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+
+.row {
+  max-width: 72rem; margin: 0 auto; padding: 4rem 1.25rem;
+  display: grid; gap: 2rem; align-items: center; grid-template-columns: 1fr;
+}
+@media (min-width: 60rem) {
+  .row { grid-template-columns: 0.8fr 1.2fr; gap: 4rem; padding: 5rem 1.25rem; }
+  .row.flip { grid-template-columns: 1.2fr 0.8fr; }
+  .row.flip .row-text { order: 2; }
+}
+.row + .row { border-top: 1px solid var(--line); }
+.row h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.15; margin: .2rem 0 .8rem; letter-spacing: -.02em; }
+.row-text p:not(.kicker) { color: var(--muted); font-size: 1.05rem; }
+.kicker {
+  display: flex; align-items: center; gap: .5rem; margin: 0;
+  font-size: .85rem; font-weight: 600; color: var(--accent);
+}
+.tag {
+  font-size: .7rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .05rem .5rem;
+}
+.row-shot { margin: 0; text-align: center; position: relative; }
+.row-shot img { height: auto; max-width: 100%; border: 1px solid var(--line); background: var(--bg); box-shadow: 0 14px 40px rgba(37,17,55,.14); }
+.row-shot .mac { width: 100%; border-radius: .8rem; }
+.row-shot .tablet { width: 100%; border-radius: 1.1rem; }
+/* ⚠️ 300px as in .shot: a phone shot wider than its asset turns soft. */
+.row-shot .phone { width: 300px; border-radius: 1.4rem; }
+.row-shot.pair { padding-bottom: 2rem; text-align: left; }
+.row-shot.pair .mac { width: 90%; }
+.row-shot.pair .over { position: absolute; right: 0; bottom: 0; width: 26%; border-radius: 1.1rem; }
+
+.film-band {
+  background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 3.5rem 1.25rem; text-align: center;
+}
+.film-band h2 { margin: 0 0 1.4rem; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.02em; }
+.film-band .film { max-width: 58rem; margin: 0 auto; }
+
+.plans { display: grid; gap: 1rem; grid-template-columns: 1fr; margin: 1rem 0; }
+@media (min-width: 34rem) { .plans { grid-template-columns: 1fr 1fr; } }
+.plan { border: 1px solid var(--line); border-radius: .9rem; padding: 1.1rem 1.2rem; background: var(--surface); }
+.plan h3 { margin: 0 0 .3rem; }
+.plan p { margin: 0; color: var(--muted); font-size: .96rem; }
+.plan.paid { border-color: var(--accent); }
+
+.end-cta {
+  margin: 3rem 0 0; padding: 2rem 1.25rem; text-align: center;
+  border: 1px solid var(--line); border-radius: 1.1rem; background: var(--surface);
+}
+.end-cta p { font-size: 1.15rem; font-weight: 600; margin: 0 0 1rem; }
+.end-cta .cta { justify-content: center; margin: 0; }
+.is-home header .wrap { max-width: 72rem; }
