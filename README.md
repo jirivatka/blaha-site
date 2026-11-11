@@ -53,12 +53,14 @@ loads from outside).
 
 ## The launch film
 
-`video/blaha.mp4` (60 s, 1080p, crf 26 re-encode, no audio track, 3.7 MB) and
-`video/blaha-poster.jpg` sit under the hero in `figure.film`. Since 2026-10-20
-this is the **all-platform cut**, silent by Jiri's request: Android screens from
-the Play listing, iPad, Mac and iPhone screens from the App Store sets. The
-master and the HyperFrames project are in the app repo's untracked
-`brag-output-all/`. It replaced the 45 s Apple cut (`brag-output-mac/`).
+`video/blaha.mp4` (80.5 s, 1080p, crf 26 re-encode, no audio track, 4.9 MB) and
+`video/blaha-poster.jpg` sit under the hero in `figure.film`. This is the
+**1.3 cut**, silent by Jiri's request: the 1.2 all-platform film plus folders
+and tags on the Mac and the Apple Watch (Android screens from the Play listing,
+the rest from the App Store sets and watch shots). The master and the HyperFrames
+project are in the app repo's untracked `brag-output-13/`. The `?v=` on the
+`src` is a cache key: bump it on every swap.
+⚠️ It shows the Apple Watch, so it belongs on `main` only once 1.3 is live.
 - ⛔ **Self-hosted, never a YouTube or Vimeo embed** — see the note at the top:
   no external assets, and an iframe would set cookies the privacy page does not
   mention.
