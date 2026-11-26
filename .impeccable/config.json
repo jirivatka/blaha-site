@@ -1,3 +1,36 @@
 {
-  "buildPath": "code"
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T23:19:31.186Z",
+        "reason": "Claude: column strips hang from the board's top edge by design, like the app icon's header band (DESIGN.md Shapes)"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T23:19:31.200Z",
+        "reason": "Claude: the board holding task rows and one offer card is the chosen world (DESIGN.md One Calm Card Rule)"
+      },
+      {
+        "rule": "aphoristic-cadence",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T23:19:31.213Z",
+        "reason": "Claude: false positive, matched the two store-link button labels, not prose"
+      }
+    ]
+  }
 }
