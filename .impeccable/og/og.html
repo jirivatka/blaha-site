@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../style.css?v=3"><style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:var(--ground)}
+.og{position:absolute;inset:36px 40px;background:var(--board);border-radius:30px;display:grid;grid-template-columns:1.25fr 1fr;gap:22px;padding:0 22px 22px}
+.og .col{min-width:0}
+.og .offer{margin:0;padding:34px 34px 30px;height:100%}
+.og .offer h1{font-size:62px}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:26px;font:700 28px/1 var(--display);color:var(--ink)}
+.brand img{width:56px;height:56px;border-radius:13px}
+.og .lede{font-size:21px;margin-top:18px}
+.og .row{font-size:17px;padding:15px 16px}
+.og .row small{font-size:14px}
+.og .ring{width:24px;height:24px}
+.og .rows{gap:10px}
+.og .strip{font-size:18px}
+.url{position:absolute;bottom:34px;font:600 20px/1 var(--display);color:var(--strip);margin:0}
+.og .offer{position:relative}
+.og .is-done .ring::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:12px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+</style></head><body>
+<div class="og">
+  <div class="col">
+    <p class="strip">Now <span class="n">3</span></p>
+    <div class="offer">
+      <div class="brand"><img src="../../icon-512.png" alt="">Blaha</div>
+      <h1>A planner for Vikunja, not just a list.</h1>
+      <p class="lede">iPhone, iPad, Mac and Android. Your tasks stay on your own server.</p>
+      <p class="url">blahatasks.app</p>
+    </div>
+  </div>
+  <div class="col">
+    <p class="strip">Today <span class="n">sample tasks</span></p>
+    <ul class="rows">
+      <li class="row is-done"><span class="ring ring-red"></span><span class="t"><span class="when when-red">Yesterday</span>Send the signed contract back<small>Work › Client onboarding</small></span></li>
+      <li class="row"><span class="ring ring-blue"></span><span class="t"><span class="when when-orange">Today</span>Call the new client to confirm the kick-off<small>Work › Client onboarding <i class="tag">Calls</i></small></span></li>
+      <li class="row"><span class="ring ring-yellow"></span><span class="t"><span class="when when-yellow">Thu</span>Draft the onboarding checklist<small>Work › Client onboarding</small></span></li>
+      <li class="row"><span class="rev-wrap"><svg class="rev" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12a8 8 0 0 1 14.3-4.9M18.5 3.5v4h-4M5.5 20.5v-4h4"/></svg></span><span class="t">Review: Flat maintenance<small>Every two weeks · due Friday</small></span></li>
+      <li class="row"><span class="ring ring-grey"></span><span class="t"><span class="when">Mon</span>Renew the domain<small>Deferred · Work › Website relaunch</small></span></li>
+    </ul>
+  </div>
+</div>
+</body></html>
