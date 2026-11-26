@@ -1,0 +1,4 @@
+# GitHub Pages: keep the design notes in the repo but off the site.
+exclude:
+  - PRODUCT.md
+  - DESIGN.md

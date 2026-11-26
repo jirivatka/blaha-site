@@ -1,0 +1,150 @@
+{
+ "schemaVersion": 2,
+ "generatedAt": "2026-11-27T00:17:16.902895+01:00",
+ "title": "Design System: blahatasks.app",
+ "extensions": {
+  "colorMeta": {
+   "strip": {
+    "role": "primary",
+    "displayName": "Header Plum"
+   },
+   "board": {
+    "role": "primary",
+    "displayName": "Board Lavender"
+   },
+   "check-red": {
+    "role": "secondary",
+    "displayName": "Check Red"
+   },
+   "ground": {
+    "role": "neutral",
+    "displayName": "Night Plum"
+   }
+  },
+  "typographyMeta": {
+   "display": {
+    "displayName": "Display",
+    "purpose": "The H1 on the offer card only."
+   },
+   "title": {
+    "displayName": "Strip title",
+    "purpose": "Column strips and button labels."
+   }
+  },
+  "shadows": [
+   {
+    "name": "row",
+    "value": "0 2px 6px rgba(29,21,40,.10),0 8px 18px -10px rgba(29,21,40,.25)",
+    "purpose": "Task rows and notes."
+   },
+   {
+    "name": "offer",
+    "value": "0 4px 10px rgba(29,21,40,.10),0 22px 40px -22px rgba(29,21,40,.45)",
+    "purpose": "The one offer card."
+   },
+   {
+    "name": "board",
+    "value": "0 30px 60px -30px rgba(0,0,0,.6)",
+    "purpose": "Board panel on the plum ground."
+   }
+  ],
+  "motion": [
+   {
+    "name": "ease-out",
+    "value": "cubic-bezier(.16,1,.3,1)",
+    "purpose": "All state transitions."
+   },
+   {
+    "name": "tick",
+    "value": "ring fills .25s, check scales in .3s, row moves to Done after 650ms with a .5s arrive",
+    "purpose": "The page's one authored moment; instant under reduced motion."
+   }
+  ],
+  "breakpoints": [
+   {
+    "name": "tablet",
+    "value": "1100px"
+   },
+   {
+    "name": "phone",
+    "value": "640px"
+   }
+  ]
+ },
+ "components": [
+  {
+   "name": "Primary Button",
+   "kind": "button",
+   "refersTo": "button-primary",
+   "description": "Store download link.",
+   "html": "<a class=\"ds-btn\" href=\"#\">Download on the App Store</a>",
+   "css": ".ds-btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:#36275a;color:#fff;font:600 16px/1 Figtree,system-ui,sans-serif;text-decoration:none;transition:background-color .2s} .ds-btn:hover{background:#66499a} .ds-btn:focus-visible{outline:3px solid #5b92dc;outline-offset:3px}"
+  },
+  {
+   "name": "Line Button",
+   "kind": "button",
+   "refersTo": "button-line",
+   "description": "Second store link.",
+   "html": "<a class=\"ds-btn-line\" href=\"#\">Get it on Google Play</a>",
+   "css": ".ds-btn-line{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;color:#36275a;box-shadow:inset 0 0 0 2px #36275a;font:600 16px/1 Figtree,system-ui,sans-serif;text-decoration:none} .ds-btn-line:hover{background:#ece7f3} .ds-btn-line:focus-visible{outline:3px solid #5b92dc;outline-offset:3px}"
+  },
+  {
+   "name": "Task Row",
+   "kind": "custom",
+   "refersTo": "task-row",
+   "description": "A task as the app shows it: priority ring, date, title, path.",
+   "html": "<div class=\"ds-row\"><span class=\"ds-ring\"></span><span><span class=\"ds-when\">Today</span>Call the new client<small>Work › Client onboarding</small></span></div>",
+   "css": ".ds-row{display:flex;gap:12px;align-items:flex-start;background:#f8f6fb;border-radius:16px;padding:13px 14px;color:#1d1528;font:15.5px/1.3 -apple-system,system-ui,sans-serif;box-shadow:0 2px 6px rgba(29,21,40,.10),0 8px 18px -10px rgba(29,21,40,.25)} .ds-row small{display:block;font-size:13px;color:#4b4159;margin-top:4px} .ds-ring{flex:none;width:22px;height:22px;border-radius:50%;border:2.5px solid #2b7de3} .ds-when{font-size:13px;color:#9a4f08;margin-right:7px}"
+  },
+  {
+   "name": "Column Strip",
+   "kind": "custom",
+   "refersTo": "column-strip",
+   "description": "Names a board column; hangs from the board's top edge.",
+   "html": "<div class=\"ds-strip\">Now <span>3</span></div>",
+   "css": ".ds-strip{display:flex;justify-content:space-between;background:#36275a;color:#efe9f7;font:600 16px/1 Figtree,system-ui,sans-serif;padding:14px 16px;border-radius:0 0 16px 16px} .ds-strip span{font:500 13px/1 system-ui;color:#cbbfe0}"
+  },
+  {
+   "name": "Navigation",
+   "kind": "nav",
+   "description": "Top bar.",
+   "html": "<nav class=\"ds-nav\"><b>Blaha</b><span><a href=\"#\">Support</a><a href=\"#\">Forum</a></span></nav>",
+   "css": ".ds-nav{display:flex;justify-content:space-between;align-items:center;height:60px;padding:0 24px;background:#36275a;color:#efe9f7;font:15px system-ui} .ds-nav b{font:700 20px Figtree,system-ui} .ds-nav a{color:#efe9f7;text-decoration:none;padding:8px 12px;border-radius:999px} .ds-nav a:hover{background:rgba(255,255,255,.08)}"
+  }
+ ],
+ "narrative": {
+  "northStar": "The icon's board, life-size",
+  "overview": "The app icon is a board: a dark plum header strip over a lavender panel of coloured pills, with one red check. The site is that board at full scale, with tasks as rows that start with the app's own hollow priority rings and the real screenshots as the main pictures.",
+  "keyCharacteristics": [
+   "Plum ground, lavender boards, strips hanging from the top edge.",
+   "Hollow rings in priority colours lead every task row; the red check is the one mark of done.",
+   "One project colour per pill, flat, never tinted.",
+   "One calm card (the offer) on an occupied board.",
+   "Real screenshots, never mock devices."
+  ],
+  "rules": [
+   {
+    "name": "The One Calm Card Rule",
+    "body": "Each board has at most one white offer card; everything else on it is a task row.",
+    "section": "colors"
+   },
+   {
+    "name": "The Flat Pill Rule",
+    "body": "Pill and ring colours are flat and unmixed: no tints, gradients or opacity washes of them.",
+    "section": "colors"
+   }
+  ],
+  "dos": [
+   "Do start every task row with a hollow ring in a priority or pill colour.",
+   "Do put real app screenshots on board panels, at their real aspect.",
+   "Do label sample tasks as sample data near the board.",
+   "Do keep store links as text buttons (no badge images) and every asset self-hosted."
+  ],
+  "donts": [
+   "Don't add device mockups, gradient heroes or rows of equal feature cards.",
+   "Don't put a label or eyebrow above a heading; the strip names the panel instead.",
+   "Don't use any colour for decoration that is not from the icon or the app's rings.",
+   "Don't show a Review screen or name a competing app."
+  ]
+ }
+}
